@@ -151,11 +151,7 @@ if (is_rcd_ta_enabled())
     $vbulletin->options['mrgdp_delimeter_enable'] = $vbulletin->options['rcd_ta_doublepost_show_splitter'];
 
     // Disable tagging
-    // 6 - Administrator group id
-    if (!is_member_of($vbulletin->userinfo,6))
-    {
-        $vbulletin->options['threadtagging'] = 0;
-    }
+    $vbulletin->options['threadtagging'] = 0;
 }]]></phpcode>
 		</plugin>
 		<plugin active="1" executionorder="5">
